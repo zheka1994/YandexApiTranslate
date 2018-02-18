@@ -13,4 +13,7 @@ public interface TranslateService {
     @FormUrlEncoded
     @POST("tr.json/translate")
     Call<Response> getTranslate(@Field("key") String key,@Field("text") String text,@Field("lang") String lang);
+    @FormUrlEncoded
+    @POST("tr.json/getLangs")
+    Call<Languages> getLanguages(@Field("key") String key, @Field("ui") String ui);
 }
